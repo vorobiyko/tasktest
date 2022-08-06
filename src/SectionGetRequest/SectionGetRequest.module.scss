@@ -1,0 +1,132 @@
+@import "./../app";
+@import "./../btn-styles";
+%display-columns{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+%text-params{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+%max-width{
+  max-width: calc(370px - 40px);
+}
+%toolTip{
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+  padding: 3px 16px;
+  z-index: 999;
+}
+@mixin grid($gap,$el){
+  gap: $gap;
+  grid-template-columns: repeat($el, 1fr);
+}
+@mixin padding($y, $x){
+  padding: $y $x;
+}
+
+.mainContainer{
+  @include padding(140px,0);
+  @extend %display-columns;
+  //grid
+  .cardContainer{
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      position: relative;
+
+      @extend %display-columns;
+      .userAvatar{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+      .userName{
+        margin: 20px 0;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .toolTipName{
+        @extend %toolTip;
+        bottom: 45px;
+        &{
+          h2{
+            color: #FFFFFF;
+          }
+        }
+      }
+      .toolTipEmail{
+        @extend %toolTip;
+        bottom: 75px;
+        &{
+          h2{
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .userName,.userPosition,.userPhone,.userEmail{
+        @extend %max-width;
+        @extend %text-params;
+        cursor: pointer;
+      }
+    }
+  &{
+    button{
+      @extend %button-style
+    }
+    .disabled{
+      display: none;
+    }
+  }
+}
+.contentContainer{
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  @include grid(29px,3);
+  grid-auto-flow: row;
+}
+
+
+//For screen 1024px
+@media screen and (max-width: 1024px){
+  %max-width{
+    max-width: calc(282px - 40px);
+  }
+  .mainContainer{
+    @include padding(140px,60px);
+  }
+}
+
+//For screen 768px
+@media (max-width: 768px){
+  %max-width{
+    max-width: calc(344px - 40px);
+  }
+  .mainContainer{
+    @include padding(140px,32px);
+  }
+  .contentContainer{
+    @include grid(16px,2);
+  }
+}
+//For screen 400px
+@media (max-width: 400px){
+  %max-width{
+    max-width: calc(328px - 40px);
+  }
+  .mainContainer{
+    @include padding(140px,16px);
+  }
+  .contentContainer{
+    @include grid(20px,1);
+  }
+}

@@ -1,0 +1,25 @@
+.appDiv{
+  width: 1170px;
+  display: flex;
+  flex-direction: column;
+}
+
+//for screen 1024px
+@media screen and (max-width: 1024px){
+  .appDiv{
+    width: 1024px;
+  }
+}
+
+//for screen 768px
+@media screen and (max-width: 768px){
+  .appDiv{
+    width: 788px;
+  }
+}
+//for screen 400px
+@media screen and (max-width: 400px){
+  .appDiv{
+    width: 400px;
+  }
+}

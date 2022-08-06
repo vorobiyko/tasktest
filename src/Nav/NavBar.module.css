@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, h1, h2, h3 {
+  font-family: Nunito;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7E7E7E;
+}
+
+input {
+  font-size: 16px;
+  line-height: 26px;
+  color: #7E7E7E;
+  text-align: start;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: #F4E041;
+  border-radius: 80px;
+  padding: 4px 30px;
+}
+a:hover {
+  background: #FFE302;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #F8F8F8;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+.navContainer .logo {
+  width: 104px;
+  height: 26px;
+}
+.navContainer .buttons {
+  display: flex;
+}
+.navContainer .buttons a:last-child {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navContainer {
+    padding: 13px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navContainer {
+    padding: 13px 32px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navContainer {
+    padding: 13px 16px;
+  }
+}
+
+/*# sourceMappingURL=NavBar.module.css.map */

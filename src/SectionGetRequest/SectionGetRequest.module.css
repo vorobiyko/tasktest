@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, h1, h2, h3 {
+  font-family: Nunito;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7E7E7E;
+}
+
+input {
+  font-size: 16px;
+  line-height: 26px;
+  color: #7E7E7E;
+  text-align: start;
+}
+
+.mainContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: #F4E041;
+  border-radius: 80px;
+  padding: 4px 30px;
+}
+.mainContainer button:hover {
+  background: #FFE302;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #F8F8F8;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: #F4E041;
+  border-radius: 80px;
+  padding: 4px 30px;
+}
+.mainContainer button:hover {
+  background: #FFE302;
+}
+
+.mainContainer .cardContainer, .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+  max-width: 330px;
+}
+
+.mainContainer .cardContainer .toolTipEmail, .mainContainer .cardContainer .toolTipName {
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+  padding: 3px 16px;
+  z-index: 999;
+}
+
+.mainContainer {
+  padding: 140px 0;
+}
+.mainContainer .cardContainer {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+}
+.mainContainer .cardContainer .userAvatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.mainContainer .cardContainer .userName {
+  margin: 20px 0;
+}
+.mainContainer .cardContainer .userName:hover {
+  cursor: pointer;
+}
+.mainContainer .cardContainer .toolTipName {
+  bottom: 45px;
+}
+.mainContainer .cardContainer .toolTipName h2 {
+  color: #FFFFFF;
+}
+.mainContainer .cardContainer .toolTipEmail {
+  bottom: 75px;
+}
+.mainContainer .cardContainer .toolTipEmail h2 {
+  color: #FFFFFF;
+}
+.mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+  cursor: pointer;
+}
+.mainContainer .disabled {
+  display: none;
+}
+
+.contentContainer {
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  gap: 29px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+    max-width: 242px;
+  }
+  .mainContainer {
+    padding: 140px 60px;
+  }
+}
+@media (max-width: 768px) {
+  .mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+    max-width: 304px;
+  }
+  .mainContainer {
+    padding: 140px 32px;
+  }
+  .contentContainer {
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .mainContainer .cardContainer .userName, .mainContainer .cardContainer .userPosition, .mainContainer .cardContainer .userPhone, .mainContainer .cardContainer .userEmail {
+    max-width: 288px;
+  }
+  .mainContainer {
+    padding: 140px 16px;
+  }
+  .contentContainer {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=SectionGetRequest.module.css.map */

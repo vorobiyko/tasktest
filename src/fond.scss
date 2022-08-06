@@ -1,0 +1,30 @@
+@mixin size-fond($size,$line-height){
+  font-size: $size;
+  line-height: $line-height;
+}
+%fond-props{
+  font-family: Nunito;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h1,h2,h3{
+  @extend %fond-props;
+}
+h1{
+  @include size-fond(40px,40px)
+}
+h2{
+  @include size-fond(16px,26px)
+}
+h3{
+  @include size-fond(12px, 14px);
+  color: #7E7E7E;
+}
+input{
+  @include size-fond(16px,26px);
+  @extend %fond-props;
+  color: #7E7E7E;
+  text-align: start;
+}

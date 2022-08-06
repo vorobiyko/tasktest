@@ -1,0 +1,62 @@
+@import "./../app";
+@import "./../btn-styles";
+
+//Change color text in block
+%color-text{
+  color: #FFFFFF;
+}
+//
+@mixin padding($top,$x,$bottom){
+  padding: $top $x $bottom;
+}
+
+.mainContainer{
+  background: linear-gradient(0deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)),
+  url('./../photos/bg.png');
+  background-size: 100% 100%;
+  @include padding(164px,395px,163px);
+  .contentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,h2{
+      @extend %color-text;
+    }
+    .title{
+      margin-bottom: 21px;
+    }
+    .description{
+      margin-bottom: 36px;
+    }
+    a{
+      h2{
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+  }
+}
+
+
+//For screen 1024px
+@media screen and (max-width: 1024px){
+  .mainContainer{
+    @include padding(164px,322px,163px);
+  }
+}
+//for screen 768px
+@media screen and (max-width: 768px){
+  .mainContainer{
+    @include padding(89px,194px,88px);
+  }
+}
+
+//for screen 400px
+@media screen and (max-width: 400px){
+  .mainContainer{
+    @include padding(40px,16px,71px);
+  }
+}
+
+

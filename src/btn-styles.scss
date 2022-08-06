@@ -1,0 +1,19 @@
+//btn color
+$normal-btn: #F4E041;
+$hover-btn: #FFE302;
+$disabled-btn: #B4B4B4;
+
+//button style
+%button-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: $normal-btn;
+  border-radius: 80px;
+  padding: 4px 30px;
+  &:hover{
+    background: $hover-btn;
+  }
+}
+//

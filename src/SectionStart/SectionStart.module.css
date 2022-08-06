@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, h1, h2, h3 {
+  font-family: Nunito;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7E7E7E;
+}
+
+input {
+  font-size: 16px;
+  line-height: 26px;
+  color: #7E7E7E;
+  text-align: start;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #F8F8F8;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContainer .contentContainer h1, .mainContainer .contentContainer h2 {
+  color: #FFFFFF;
+}
+
+.mainContainer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../photos/bg.png");
+  background-size: 100% 100%;
+  padding: 164px 395px 163px;
+}
+.mainContainer .contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContainer .contentContainer .title {
+  margin-bottom: 21px;
+}
+.mainContainer .contentContainer .description {
+  margin-bottom: 36px;
+}
+.mainContainer .contentContainer a h2 {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    padding: 164px 322px 163px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 89px 194px 88px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mainContainer {
+    padding: 40px 16px 71px;
+  }
+}
+
+/*# sourceMappingURL=SectionStart.module.css.map */
